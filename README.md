@@ -3,10 +3,12 @@
 <details>
   <summary>Disclaimer</summary>
   Klein probleem in de code design waardoor ik uiteindelijk random docenten heb toegewezen per schoolreisje:
+  
   ```php
     public static function findAvailableTeacher() {
         // choose random teacher
         return self::$teachers[array_rand(self::$teachers, 1)];
     }
-  ``` 
+  ```
+
 </details>
