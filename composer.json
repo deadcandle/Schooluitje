@@ -8,7 +8,7 @@
             "src/"
         ],
         "psr-4": {
-            "Misha\\Schooluitje\\": "src/"
+            "Schooltrip\\": "src/"
         }
     },
     "require": {}
