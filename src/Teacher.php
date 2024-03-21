@@ -16,5 +16,16 @@ class Teacher extends Person {
     public function role() {
         // todo
     }
+
+    public static function findAvailableTeacher() {
+        foreach () {
+            
+        }
+    }
+    
+    # getters
+    public static function getTeachers() {
+        return self::$teachers;
+    }
 }
 ?>

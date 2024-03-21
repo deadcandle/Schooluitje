@@ -3,14 +3,14 @@
 namespace Schooltrip;
 
 class SchooltripList {
-    private array $studentList;
+    private array $studentList = [];
     private Teacher $teacher;
 
-    public function addStudent($student) {
-        
+    public function addStudentToList($student) {
+        $this->studentList[] = $student;
     }
     public function setTeacher($teacher) {
-        
+        $this->teacher = $teacher;
     }
 
     # getters

@@ -10,17 +10,17 @@ use Schooltrip\Schooltrip;
 
 # maak groepen aan
 $mh1a = new Group("MH1A");
-$mh2b = new Group("MH1B");
+$mh1b = new Group("MH1B");
 
 # maak studenten aan
-$hakurei = new Student("Hakurei Reimu",     $mh1a);
-$kirisame = new Student("Kirisame Marisa",  $mh1a);
-$izayoi = new Student("Izayoi Sakuya",      $mh1a);
-$remilia = new Student("Remilia Scarlet",   $mh1a);
-$alice = new Student("Alice Margatroid",    $mh2a);
-$kochiya = new Student("Kochiya Sanae",     $mh2a);
-$moriya = new Student("Moriya Suwako",      $mh2a);
-$konpaku = new Student("Konpaku Youmu",     $mh2a);
+$hakurei = new Student("Hakurei Reimu",     $mh1a, true);
+$kirisame = new Student("Kirisame Marisa",  $mh1a, false);
+$izayoi = new Student("Izayoi Sakuya",      $mh1a, true);
+$remilia = new Student("Remilia Scarlet",   $mh1a, false);
+$alice = new Student("Alice Margatroid",    $mh1b, true);
+$kochiya = new Student("Kochiya Sanae",     $mh1b, false);
+$moriya = new Student("Moriya Suwako",      $mh1b, true);
+$konpaku = new Student("Konpaku Youmu",     $mh1b, false);
 
 # maak docenten aan
 $oedietram = new Teacher("R.A. Oedietram",  50);
@@ -55,6 +55,13 @@ $schooltrip->addStudent($konpaku);
         max-width: 512px;
         margin: auto;
     }
+    table th {
+        border-bottom: 2px solid black;
+    }
+    table td {
+        background-color: rgb(200, 200, 200);
+        padding: 10px 5px;
+    }
 </style>
 
 <table>
@@ -64,7 +71,9 @@ $schooltrip->addStudent($konpaku);
         <th>Klas</th>
         <th>Betaald</th>
     </tr>
-    <?php
-    
-    ?>
+    <?php foreach ($schooltrip->getSchooltripLists() as $schooltripList) : ?>
+        <tr>
+            <td>1</td>
+        </tr>
+    <?php endforeach; ?>
 </table>
