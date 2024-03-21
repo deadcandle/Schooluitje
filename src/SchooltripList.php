@@ -6,6 +6,10 @@ class SchooltripList {
     private array $studentList = [];
     private Teacher $teacher;
 
+    public function __construct($teacher) {
+        $this->teacher = $teacher;
+    }
+
     public function addStudentToList($student) {
         $this->studentList[] = $student;
     }

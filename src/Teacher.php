@@ -18,9 +18,8 @@ class Teacher extends Person {
     }
 
     public static function findAvailableTeacher() {
-        foreach () {
-            
-        }
+        // choose random teacher
+        return self::$teachers[array_rand(self::$teachers, 1)];
     }
     
     # getters

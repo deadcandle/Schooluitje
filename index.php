@@ -73,7 +73,7 @@ $schooltrip->addStudent($konpaku);
     </tr>
     <?php foreach ($schooltrip->getSchooltripLists() as $schooltripList) : ?>
         <tr>
-            <td>1</td>
+            <td><?php echo $schooltripList->getTeacher()->getName(); ?></td>
         </tr>
     <?php endforeach; ?>
 </table>

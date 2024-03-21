@@ -16,18 +16,15 @@ class Schooltrip extends SchooltripList {
         $this->schooltripLists[] = $schooltripList;
     }
     public function addStudent($student) {
-        # If there is a triplist, add the student to it
+        # if there is a triplist, add the student to it
         foreach ($this->getSchooltripLists() as $schooltripList) {
             if (count($schooltripList->getStudentList()) < 3) {
-                # There's a triplist with room for more students
+                # there's a triplist with room for more students
                 $schooltripList->addStudentToList($student);
-            } else {
-                # Max amount of students, find a available teacher
-                $schooltripList->setTeacher(Teacher::findAvailableTeacher());
             }
         }
         # There are no triplists yet
-        $newSchooltripList = new SchooltripList();
+        $newSchooltripList = new SchooltripList(Teacher::findAvailableTeacher());
         $newSchooltripList->addStudentToList($student);
         $this->addSchooltripList($newSchooltripList);
     }
